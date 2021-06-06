@@ -1,15 +1,16 @@
 import React from 'react';
-import NavBar from "./components/NavBar";
 import CRoute from "../../route";
 import {landingRoute} from "./landingRoute";
+import AppHeader from "./components/AppHeader";
 
 
 const Landing = () => {
     return (
         <>
-            <NavBar/>
-            <CRoute routeItem={landingRoute} />
+            <AppHeader/>
+            <CRoute routeItem={landingRoute}/>
         </>
+
     );
 };
 
