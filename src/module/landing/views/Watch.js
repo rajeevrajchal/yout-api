@@ -7,8 +7,14 @@ const Watch = () => {
     return (
         <VStack>
             <Box>
-                <iframe width="1000px" height="500" src={`https://www.youtube.com/embed/${videoID}`} frameBorder="0"
-                        allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                <iframe
+                width="1000px"
+                height="500"
+                src={`https://www.youtube.com/embed/${videoID}`}
+                frameBorder="0"
+                title={'random'}
+                allow="autoplay; encrypted-media"
+                allowFullScreen/>
             </Box>
         </VStack>
     );
