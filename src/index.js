@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from 'react-router-dom';
+import {AppProvider} from "./hooks/UseAppData";
+import {ChakraProvider, ColorModeScript} from "@chakra-ui/react"
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <AppProvider>
+        <BrowserRouter>
+            <ChakraProvider>
+                <ColorModeScript initialColorMode="light"/>
+                <App/>
+            </ChakraProvider>
+        </BrowserRouter>
+    </AppProvider>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
