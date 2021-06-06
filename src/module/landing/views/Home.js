@@ -13,7 +13,7 @@ const Home = () => {
     } = videoPlaylist
     useEffect(() => {
         getPopularPlayList()
-    }, [])
+    }, [getPopularPlayList])
     return (
         <Grid templateColumns="repeat(4, min-content)" gap={6} p={10}>
             {
