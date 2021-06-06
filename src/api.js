@@ -10,7 +10,6 @@ export const callApi = async (apiConst) => {
         params: {
             key: process.env.REACT_APP_YOUTUBE_KEY,
             part:'snippet',
-            maxResults: 20,
             ...params
         },
         data,

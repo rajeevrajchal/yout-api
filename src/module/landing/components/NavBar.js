@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
-import {Box, Flex, Grid, Link, Text, useMediaQuery} from "@chakra-ui/react";
+import {Box, Flex, Grid, Link, Text} from "@chakra-ui/react";
 import {useColorMode} from "@chakra-ui/color-mode";
 import {HamburgerIcon, CloseIcon, MoonIcon, SunIcon, SearchIcon} from "@chakra-ui/icons";
+import {useHistory} from "react-router-dom";
 
 const NavBar = () => {
     const {colorMode, toggleColorMode} = useColorMode()
     const isDark = colorMode === 'dark'
     const [mobileNav, setMobileNav] = useState(false)
+    const history = useHistory()
     return (
         <Grid
             templateColumns="1fr min-content"
@@ -16,7 +18,10 @@ const NavBar = () => {
             mx={[0, 20]}
         >
             <Flex alignItems={'center'} alignContent={'center'}>
-                <Box>
+                <Box
+                    onClick={() => history.push('/')}
+                    cursor={'pointer'}
+                >
                     <Text as='h2' fontSize={30} fontWeight='bold'>YoutubeApi</Text>
                 </Box>
                 <Box

@@ -11,7 +11,8 @@ const UseVideo = () => {
             method:'GET',
             url:'videos',
             params: {
-                chart: 'mostPopular'
+                chart: 'mostPopular',
+                maxResults: 5,
             }
         })
         if(res && res.status){
